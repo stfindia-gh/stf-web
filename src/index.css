@@ -4,11 +4,13 @@
 
 html {
   scroll-behavior: smooth;
+  /* Slightly denser than default 16px — whole UI (Tailwind rem scale) scales down ~6% */
+  font-size: 93.75%;
 }
 
 @layer base {
   body {
-    @apply font-sans text-base leading-relaxed text-neutral-700 antialiased bg-white md:text-[1.0625rem] md:leading-relaxed;
+    @apply font-sans text-[0.9375rem] leading-relaxed text-neutral-700 antialiased bg-white md:text-[1rem] md:leading-relaxed;
   }
 }
 

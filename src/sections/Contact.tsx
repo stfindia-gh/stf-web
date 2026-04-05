@@ -10,20 +10,20 @@ export function Contact() {
 
   return (
     <PageSection id="contact" variant="muted">
-      <Reveal variant="scale" className="mb-14 md:mb-20">
-        <div className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-neutral-950 via-[#0a2830] to-brand-dark p-8 shadow-2xl shadow-neutral-900/20 md:grid md:grid-cols-[minmax(0,280px)_1fr] md:items-center md:gap-12 md:p-12 lg:gap-16 lg:rounded-[2.5rem] lg:p-14">
+      <Reveal variant="scale" className="mb-10 md:mb-14">
+        <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-950 via-[#0a2830] to-brand-dark p-6 shadow-2xl shadow-neutral-900/20 md:grid md:grid-cols-[minmax(0,240px)_1fr] md:items-center md:gap-10 md:p-9 lg:gap-12 lg:rounded-[1.75rem] lg:p-10">
           <div className="flex justify-center md:justify-start">
             <motion.div
               initial={{ opacity: 0, scale: 0.92, rotate: -2 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ type: "spring", stiffness: 200, damping: 22 }}
-              className="rounded-2xl bg-white p-7 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.45)] ring-1 ring-white/30 md:p-9 lg:p-10"
+              className="rounded-xl bg-white p-5 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.45)] ring-1 ring-white/30 md:p-7"
             >
               <img
                 src="/logo.png"
                 alt="Shubhankr Texfab India"
-                className="mx-auto h-28 w-auto object-contain md:h-32 lg:h-36"
+                className="mx-auto h-24 w-auto object-contain md:h-28"
               />
             </motion.div>
           </div>
@@ -42,7 +42,7 @@ export function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15 }}
-              className="mt-4 font-display text-3xl font-bold leading-tight tracking-[-0.03em] text-white md:text-4xl lg:text-5xl"
+              className="mt-3 font-display text-2xl font-bold leading-tight tracking-[-0.03em] text-white md:text-3xl lg:text-4xl"
             >
               Let’s build your next textile program
             </motion.h2>
@@ -51,7 +51,7 @@ export function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.22 }}
-              className="mt-5 text-lg leading-relaxed text-white/65 md:text-xl"
+              className="mt-4 text-base leading-relaxed text-white/65 md:text-[1.0625rem]"
             >
               Share specs, volumes, and timelines — we’ll respond with a clear path forward. Update placeholders
               below with your official details.
@@ -60,14 +60,14 @@ export function Contact() {
         </div>
       </Reveal>
 
-      <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
+      <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-14">
         <Reveal variant="left">
           <form
             onSubmit={onSubmit}
-            className="space-y-6 rounded-[1.75rem] border border-neutral-200/80 bg-white p-8 shadow-[0_20px_50px_-24px_rgba(0,0,0,0.12)] md:space-y-7 md:p-10 lg:p-12"
+            className="space-y-5 rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-[0_16px_40px_-20px_rgba(0,0,0,0.1)] md:space-y-5 md:p-8"
           >
             <div>
-              <label htmlFor="name" className="block text-base font-medium text-neutral-800">
+              <label htmlFor="name" className="block text-sm font-medium text-neutral-800">
                 Name
               </label>
               <input
@@ -75,12 +75,12 @@ export function Contact() {
                 name="name"
                 type="text"
                 required
-                className="mt-3 w-full rounded-2xl border border-neutral-200 bg-neutral-50 px-5 py-4 text-base outline-none transition focus:border-brand/50 focus:bg-white focus:ring-4 focus:ring-brand/15"
+                className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-[0.9375rem] outline-none transition focus:border-brand/50 focus:bg-white focus:ring-2 focus:ring-brand/15"
                 placeholder="Your name"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-base font-medium text-neutral-800">
+              <label htmlFor="email" className="block text-sm font-medium text-neutral-800">
                 Email
               </label>
               <input
@@ -88,32 +88,32 @@ export function Contact() {
                 name="email"
                 type="email"
                 required
-                className="mt-3 w-full rounded-2xl border border-neutral-200 bg-neutral-50 px-5 py-4 text-base outline-none transition focus:border-brand/50 focus:bg-white focus:ring-4 focus:ring-brand/15"
+                className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-[0.9375rem] outline-none transition focus:border-brand/50 focus:bg-white focus:ring-2 focus:ring-brand/15"
                 placeholder="you@company.com"
               />
             </div>
             <div>
-              <label htmlFor="phone" className="block text-base font-medium text-neutral-800">
+              <label htmlFor="phone" className="block text-sm font-medium text-neutral-800">
                 Phone
               </label>
               <input
                 id="phone"
                 name="phone"
                 type="tel"
-                className="mt-3 w-full rounded-2xl border border-neutral-200 bg-neutral-50 px-5 py-4 text-base outline-none transition focus:border-brand/50 focus:bg-white focus:ring-4 focus:ring-brand/15"
+                className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-[0.9375rem] outline-none transition focus:border-brand/50 focus:bg-white focus:ring-2 focus:ring-brand/15"
                 placeholder="+91 …"
               />
             </div>
             <div>
-              <label htmlFor="requirement" className="block text-base font-medium text-neutral-800">
+              <label htmlFor="requirement" className="block text-sm font-medium text-neutral-800">
                 Requirement
               </label>
               <textarea
                 id="requirement"
                 name="requirement"
-                rows={5}
+                rows={4}
                 required
-                className="mt-3 w-full resize-y rounded-2xl border border-neutral-200 bg-neutral-50 px-5 py-4 text-base outline-none transition focus:border-brand/50 focus:bg-white focus:ring-4 focus:ring-brand/15"
+                className="mt-2 w-full resize-y rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-[0.9375rem] outline-none transition focus:border-brand/50 focus:bg-white focus:ring-2 focus:ring-brand/15"
                 placeholder="GSM, application, colors, volumes, timeline…"
               />
             </div>
@@ -121,20 +121,20 @@ export function Contact() {
               type="submit"
               whileHover={{ scale: 1.02, y: -1 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full rounded-full bg-brand py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-dark md:py-5"
+              className="w-full rounded-full bg-brand py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark md:text-[0.9375rem]"
             >
               Submit inquiry
             </motion.button>
           </form>
         </Reveal>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           <Reveal variant="right" delay={0.08}>
-            <div className="rounded-[1.75rem] border border-neutral-200/80 bg-white p-8 md:p-10">
-              <h3 className="font-display text-2xl font-bold tracking-[-0.02em] text-neutral-900">
+            <div className="rounded-2xl border border-neutral-200/80 bg-white p-6 md:p-8">
+              <h3 className="font-display text-xl font-bold tracking-[-0.02em] text-neutral-900">
                 Company details
               </h3>
-              <address className="mt-6 not-italic text-base leading-relaxed text-neutral-600 md:text-lg">
+              <address className="mt-4 not-italic text-sm leading-relaxed text-neutral-600 md:text-base">
                 <p className="font-semibold text-neutral-900">Shubhankr Texfab India</p>
                 <p className="mt-3">[Street address line]</p>
                 <p>[City, State — PIN]</p>
@@ -149,12 +149,12 @@ export function Contact() {
                   </a>
                 </p>
               </address>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-2">
                 <a
                   href="https://www.linkedin.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border-2 border-neutral-200 px-5 py-2.5 text-sm font-semibold text-neutral-700 transition hover:border-brand hover:text-brand md:text-base"
+                  className="rounded-full border-2 border-neutral-200 px-4 py-2 text-xs font-semibold text-neutral-700 transition hover:border-brand hover:text-brand md:text-sm"
                 >
                   LinkedIn
                 </a>
@@ -162,7 +162,7 @@ export function Contact() {
                   href="https://www.indiamart.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border-2 border-neutral-200 px-5 py-2.5 text-sm font-semibold text-neutral-700 transition hover:border-brand hover:text-brand md:text-base"
+                  className="rounded-full border-2 border-neutral-200 px-4 py-2 text-xs font-semibold text-neutral-700 transition hover:border-brand hover:text-brand md:text-sm"
                 >
                   IndiaMART
                 </a>
@@ -171,10 +171,10 @@ export function Contact() {
           </Reveal>
 
           <Reveal variant="right" delay={0.12}>
-            <div className="overflow-hidden rounded-[1.75rem] border border-neutral-200/80 bg-neutral-200 shadow-lg">
+            <div className="overflow-hidden rounded-2xl border border-neutral-200/80 bg-neutral-200 shadow-lg">
               <iframe
                 title="Company location map"
-                className="h-72 w-full grayscale-[10%] md:h-80 lg:h-96"
+                className="h-56 w-full grayscale-[10%] md:h-64 lg:h-72"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=77.0%2C28.4%2C77.4%2C28.8&amp;layer=mapnik"

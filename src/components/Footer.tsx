@@ -3,11 +3,11 @@ import { navGroups } from "../data/nav";
 export function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-[#eff0f2]">
-      <div className="mx-auto max-w-[90rem] px-6 py-16 sm:px-10 md:py-24 lg:px-14">
-        <div className="grid gap-14 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 md:py-16 lg:px-10">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
           <div className="lg:col-span-1">
-            <img src="/logo.png" alt="" className="mb-6 h-16 w-auto md:h-[4.5rem]" />
-            <p className="max-w-sm text-base leading-relaxed text-neutral-600 md:text-lg">
+            <img src="/logo.png" alt="" className="mb-5 h-12 w-auto md:h-14" />
+            <p className="max-w-sm text-sm leading-relaxed text-neutral-600 md:text-base">
               High-quality air mesh fabrics — engineered for breathability, durability, and performance across
               industries.
             </p>
@@ -17,12 +17,12 @@ export function Footer() {
               <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
                 {group.label}
               </h3>
-              <ul className="mt-5 space-y-3">
+              <ul className="mt-4 space-y-2">
                 {group.links.map((l) => (
                   <li key={l.href}>
                     <a
                       href={l.href}
-                      className="text-base text-neutral-700 transition-colors hover:text-brand md:text-[1.0625rem]"
+                      className="text-sm text-neutral-700 transition-colors hover:text-brand md:text-[0.9375rem]"
                     >
                       {l.label}
                     </a>
@@ -32,7 +32,7 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <p className="mt-16 border-t border-neutral-200/90 pt-10 text-center text-sm text-neutral-500 md:text-base">
+        <p className="mt-12 border-t border-neutral-200/90 pt-8 text-center text-xs text-neutral-500 md:text-sm">
           © {new Date().getFullYear()} Shubhankr Texfab India. All rights reserved.
         </p>
       </div>

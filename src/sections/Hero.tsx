@@ -22,7 +22,7 @@ export function Hero() {
     <section
       id="hero"
       ref={ref}
-      className="relative flex min-h-[100dvh] flex-col overflow-hidden bg-[#eff0f2] pt-[5rem] sm:pt-[5.25rem]"
+      className="relative flex min-h-[100dvh] flex-col overflow-hidden bg-[#eff0f2] pt-14 sm:pt-16"
     >
       {/* Same language as inner pages: light surface + mesh + soft brand blobs */}
       <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-0">
@@ -32,8 +32,8 @@ export function Hero() {
         <div className="absolute -right-24 top-1/4 h-[min(480px,75vw)] w-[min(480px,75vw)] rounded-full bg-brand/10 blur-[90px]" />
       </motion.div>
 
-      <div className="relative z-10 mx-auto flex min-h-0 w-full max-w-[90rem] flex-1 flex-col px-6 sm:px-10 lg:px-14 xl:px-16">
-        <div className="grid min-h-0 flex-1 grid-cols-1 gap-8 py-10 lg:grid-cols-12 lg:items-center lg:gap-12 lg:py-12 xl:gap-16">
+      <div className="relative z-10 mx-auto flex min-h-0 w-full max-w-7xl flex-1 flex-col px-5 sm:px-8 lg:px-10">
+        <div className="grid min-h-0 flex-1 grid-cols-1 gap-6 py-8 lg:grid-cols-12 lg:items-center lg:gap-10 lg:py-10 xl:gap-12">
           {/* Left: stat cards — matches Manufacturing / Product cards */}
           <motion.div
             style={{ y: yMesh }}
@@ -51,7 +51,7 @@ export function Hero() {
               initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ ...springSoft, delay: 0.12 }}
-              className="mt-6 font-display text-[clamp(2.5rem,6vw,4rem)] font-bold leading-[0.95] tracking-[-0.04em] text-neutral-900/10"
+              className="mt-4 font-display text-[clamp(2rem,5vw,3.25rem)] font-bold leading-[0.95] tracking-[-0.04em] text-neutral-900/10"
             >
               3D mesh
             </motion.p>
@@ -63,10 +63,10 @@ export function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ ...springSoft, delay: 0.22 + i * 0.08 }}
                   whileHover={{ y: -4, transition: { type: "spring", stiffness: 400, damping: 22 } }}
-                  className="rounded-[1.25rem] border border-neutral-200/90 bg-white p-5 shadow-[0_12px_40px_-28px_rgba(0,0,0,0.12)] md:p-6"
+                  className="rounded-2xl border border-neutral-200/90 bg-white p-4 shadow-[0_10px_32px_-24px_rgba(0,0,0,0.1)] md:p-5"
                 >
-                  <p className="font-display text-lg font-bold text-neutral-900 md:text-xl">{s.value}</p>
-                  <p className="mt-1 text-sm text-neutral-600 md:text-base">{s.label}</p>
+                  <p className="font-display text-base font-bold text-neutral-900 md:text-lg">{s.value}</p>
+                  <p className="mt-1 text-xs text-neutral-600 md:text-sm">{s.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -74,14 +74,14 @@ export function Hero() {
 
           {/* Right: headline + CTAs — white panel like contact / forms */}
           <div className="relative flex flex-col justify-center lg:col-span-7">
-            <div className="relative overflow-hidden rounded-[1.75rem] border border-neutral-200/90 bg-white/90 p-8 shadow-[0_24px_60px_-40px_rgba(0,123,154,0.18)] backdrop-blur-sm md:rounded-[2rem] md:p-10 lg:p-12 xl:p-14">
+            <div className="relative overflow-hidden rounded-2xl border border-neutral-200/90 bg-white/90 p-6 shadow-[0_20px_50px_-36px_rgba(0,123,154,0.16)] backdrop-blur-sm md:rounded-[1.75rem] md:p-8 lg:p-10">
               <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand/[0.07] blur-3xl" />
               <motion.div
                 initial={{ opacity: 0, y: 28 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
               >
-                <h1 className="relative font-display text-[clamp(2rem,4.8vw,3.75rem)] font-bold leading-[1.06] tracking-[-0.035em] text-neutral-900">
+                <h1 className="relative font-display text-[clamp(1.75rem,4vw,3rem)] font-bold leading-[1.08] tracking-[-0.03em] text-neutral-900">
                   High-quality air mesh fabrics for{" "}
                   <span className="relative inline-block text-brand-dark">
                     performance
@@ -101,7 +101,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.28 }}
-                className="relative mt-8 max-w-2xl text-lg leading-relaxed text-neutral-600 md:mt-10 md:text-xl"
+                className="relative mt-6 max-w-2xl text-base leading-relaxed text-neutral-600 md:mt-8 md:text-[1.0625rem]"
               >
                 Durable, breathable textiles engineered for brands that need repeatable quality at scale — not
                 one-off samples.
@@ -111,13 +111,13 @@ export function Hero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.42 }}
-                className="relative mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap md:mt-12"
+                className="relative mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-10"
               >
                 <motion.a
                   href="#products"
                   whileHover={{ scale: 1.03, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center rounded-full bg-brand px-9 py-4 text-base font-semibold text-white shadow-[0_12px_40px_-12px_rgba(0,123,154,0.5)] transition-colors hover:bg-brand-dark md:px-11 md:text-lg"
+                  className="inline-flex items-center justify-center rounded-full bg-brand px-7 py-3 text-sm font-semibold text-white shadow-[0_10px_32px_-10px_rgba(0,123,154,0.45)] transition-colors hover:bg-brand-dark md:px-9 md:py-3.5 md:text-[0.9375rem]"
                 >
                   Explore products
                 </motion.a>
@@ -125,7 +125,7 @@ export function Hero() {
                   href="#contact"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center rounded-full border-2 border-neutral-200 bg-white px-9 py-4 text-base font-semibold text-neutral-900 transition-colors hover:border-brand hover:text-brand md:px-11 md:text-lg"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-neutral-200 bg-white px-7 py-3 text-sm font-semibold text-neutral-900 transition-colors hover:border-brand hover:text-brand md:px-9 md:py-3.5 md:text-[0.9375rem]"
                 >
                   Contact us
                 </motion.a>
@@ -135,7 +135,7 @@ export function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.75, duration: 0.5 }}
-                className="relative mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-neutral-200 pt-9 md:mt-12 md:gap-x-12"
+                className="relative mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-neutral-200 pt-7 md:mt-10 md:gap-x-10"
               >
                 {["Breathable", "Consistent lots", "Scalable output"].map((t, i) => (
                   <motion.span
@@ -143,7 +143,7 @@ export function Hero() {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.85 + i * 0.07 }}
-                    className="flex items-center gap-2 text-sm font-medium text-neutral-500 md:text-base"
+                    className="flex items-center gap-2 text-xs font-medium text-neutral-500 md:text-sm"
                   >
                     <span className="h-2 w-2 rounded-full bg-brand shadow-[0_0_10px_rgba(0,123,154,0.45)]" />
                     {t}

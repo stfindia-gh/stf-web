@@ -12,28 +12,28 @@ export function SectionHeading({ title, description, eyebrow, className = "", li
   const eyebrowColor = light ? "text-brand/90" : "text-brand";
 
   return (
-    <header className={`mb-14 md:mb-20 ${className}`}>
+    <header className={`mb-10 md:mb-14 ${className}`}>
       {eyebrow ? (
         <p
-          className={`mb-4 text-xs font-semibold uppercase tracking-[0.28em] md:text-sm ${eyebrowColor}`}
+          className={`mb-3 text-[0.6875rem] font-semibold uppercase tracking-[0.24em] md:text-xs ${eyebrowColor}`}
         >
           {eyebrow}
         </p>
       ) : null}
       <h2
-        className={`font-display text-[clamp(2rem,4.2vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.035em] ${titleColor}`}
+        className={`font-display text-[clamp(1.625rem,3.4vw,2.75rem)] font-bold leading-[1.1] tracking-[-0.03em] ${titleColor}`}
       >
         {title}
       </h2>
       {description ? (
         <p
-          className={`mt-6 max-w-2xl text-lg leading-relaxed md:text-xl md:leading-relaxed ${sub}`}
+          className={`mt-4 max-w-2xl text-base leading-relaxed md:mt-5 md:text-[1.0625rem] md:leading-relaxed ${sub}`}
         >
           {description}
         </p>
       ) : null}
       <div
-        className={`mt-8 h-1 w-14 rounded-full md:mt-10 md:w-16 ${light ? "bg-brand" : "bg-gradient-to-r from-brand to-brand/40"}`}
+        className={`mt-6 h-0.5 w-12 rounded-full md:mt-8 md:w-14 ${light ? "bg-brand" : "bg-gradient-to-r from-brand to-brand/40"}`}
         aria-hidden
       />
     </header>

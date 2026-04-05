@@ -31,7 +31,7 @@ export function QualityTimeline({ steps }: QualityTimelineProps) {
   const pathD = n > 1 ? `M ${cx[0]} ${LINE_Y} L ${cx[n - 1]} ${LINE_Y}` : "";
 
   return (
-    <div ref={containerRef} className="relative mx-auto w-full max-w-6xl">
+    <div ref={containerRef} className="relative mx-auto w-full max-w-5xl lg:max-w-6xl">
       {/* Desktop: horizontal pipeline — line passes through column centers */}
       <div className="relative hidden w-full pt-2 md:block">
         <svg

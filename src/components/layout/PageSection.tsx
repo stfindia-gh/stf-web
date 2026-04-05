@@ -27,15 +27,15 @@ export function PageSection({
 
   const height =
     minHeight === "tall"
-      ? "min-h-[72vh] md:min-h-[75vh] flex flex-col justify-center"
+      ? "min-h-[65vh] md:min-h-[70vh] flex flex-col justify-center"
       : minHeight === "almost-screen"
-        ? "min-h-[88vh] md:min-h-[90vh] flex flex-col justify-center"
+        ? "min-h-[82vh] md:min-h-[85vh] flex flex-col justify-center"
         : "";
 
   return (
-    <section id={id} className={`${surface} py-28 md:py-40 lg:py-44 ${height} ${className}`}>
+    <section id={id} className={`${surface} py-20 md:py-28 lg:py-32 ${height} ${className}`}>
       <div
-        className={`mx-auto w-full max-w-[90rem] px-6 sm:px-10 lg:px-14 xl:px-16 ${innerClassName}`}
+        className={`mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10 xl:px-12 ${innerClassName}`}
       >
         {children}
       </div>
