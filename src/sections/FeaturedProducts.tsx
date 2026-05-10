@@ -4,20 +4,28 @@ import { SectionHeading } from "../components/layout/SectionHeading";
 import { Stagger, StaggerItem } from "../components/motion/Stagger";
 import { Reveal } from "../components/ui/Reveal";
 
-const assetUrl = (relativePath: string) =>
-  new URL(relativePath, import.meta.url).href;
+import doubleColorMeshImg from "../../assets/1-double-col-mesh-fab.webp";
+import goliAirMeshImg from "../../assets/2-goli.webp";
+import crownMeshImg from "../../assets/3-crown.webp";
+import bdMeshImg from "../../assets/4-bd.webp";
+import zebraMeshImg from "../../assets/5-zebra.webp";
+import diamondMeshImg from "../../assets/6-diamond.webp";
+import barfiMeshImg from "../../assets/7-barfi.webp";
+import lineMeshImg from "../../assets/8-line.webp";
+import kesarMeshImg from "../../assets/9-kesar.jpeg";
+import poloMeshImg from "../../assets/10-polo.jpeg";
 
 const productImages = {
-  doubleColorMesh: assetUrl("../../assets/1-double-col-mesh-fab.webp"),
-  goliAirMesh: assetUrl("../../assets/2-goli.webp"),
-  crownMesh: assetUrl("../../assets/3-crown.webp"),
-  bdMesh: assetUrl("../../assets/4-bd.webp"),
-  zebraMesh: assetUrl("../../assets/5-zebra.webp"),
-  diamondMesh: assetUrl("../../assets/6-diamond.webp"),
-  barfiMesh: assetUrl("../../assets/7-barfi.webp"),
-  lineMesh: assetUrl("../../assets/8-line.webp"),
-  kesarMesh: assetUrl("../../assets/9-kesar.jpeg"),
-  poloMesh: assetUrl("../../assets/10-polo.jpeg"),
+  doubleColorMesh: doubleColorMeshImg,
+  goliAirMesh: goliAirMeshImg,
+  crownMesh: crownMeshImg,
+  bdMesh: bdMeshImg,
+  zebraMesh: zebraMeshImg,
+  diamondMesh: diamondMeshImg,
+  barfiMesh: barfiMeshImg,
+  lineMesh: lineMeshImg,
+  kesarMesh: kesarMeshImg,
+  poloMesh: poloMeshImg,
 } as const;
 
 const featured = [
