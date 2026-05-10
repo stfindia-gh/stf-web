@@ -82,7 +82,11 @@ export function ProductRange() {
         />
       </Reveal>
 
-      <Stagger className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-9" stagger={0.13} delayChildren={0.04}>
+      <Stagger
+        className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4"
+        stagger={0.13}
+        delayChildren={0.04}
+      >
         {products.map((p, i) => (
           <StaggerItem key={p.title} mode={i % 2 === 0 ? "pop" : "rise"}>
             <motion.article
@@ -102,23 +106,23 @@ export function ProductRange() {
                   <motion.div
                     animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 4 + i * 0.4, repeat: Infinity, ease: "easeInOut" }}
-                    className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white/90 text-brand shadow-lg backdrop-blur-sm md:h-24 md:w-24"
+                    className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white/90 text-brand shadow-lg backdrop-blur-sm md:h-24 md:w-24 lg:h-16 lg:w-16"
                   >
-                    <svg className="h-11 w-11 md:h-12 md:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-11 w-11 md:h-12 md:w-12 lg:h-9 lg:w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       {p.icon}
                     </svg>
                   </motion.div>
                 </div>
               </div>
-              <div className="flex flex-1 flex-col p-7 md:p-8">
-                <h3 className="font-display text-xl font-bold tracking-[-0.02em] text-neutral-900 md:text-2xl">
+              <div className="flex flex-1 flex-col p-7 md:p-8 lg:p-5">
+                <h3 className="font-display text-xl font-bold tracking-[-0.02em] text-neutral-900 md:text-2xl lg:text-lg">
                   {p.title}
                 </h3>
-                <p className="mt-3 flex-1 text-base leading-relaxed text-neutral-600">{p.desc}</p>
+                <p className="mt-3 flex-1 text-base leading-relaxed text-neutral-600 lg:text-sm">{p.desc}</p>
                 <motion.a
                   href="#contact"
                   whileHover={{ x: 6 }}
-                  className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-brand hover:text-brand-dark"
+                  className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-brand hover:text-brand-dark lg:text-sm"
                 >
                   View details
                   <span aria-hidden>→</span>

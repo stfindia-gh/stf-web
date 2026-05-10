@@ -10,6 +10,7 @@ const reasons = [
   { t: "Reliable supply chain", d: "Planning support and predictable releases." },
   { t: "Custom development", d: "Collaborative trials from sample to scale." },
   { t: "Long-term partnership approach", d: "We grow when your programs grow." },
+  { t: "On-time dispatch", d: "Clear timelines and dependable delivery coordination." },
 ];
 
 export function WhyChooseUs() {

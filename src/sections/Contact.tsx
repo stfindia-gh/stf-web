@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
-import type { FormEvent } from "react";
 import { PageSection } from "../components/layout/PageSection";
 import { Reveal } from "../components/ui/Reveal";
 
 export function Contact() {
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-  }
-
   return (
     <PageSection id="contact" variant="muted">
       <Reveal variant="scale" className="mb-10 md:mb-14">
@@ -53,113 +48,61 @@ export function Contact() {
               transition={{ delay: 0.22 }}
               className="mt-4 text-base leading-relaxed text-white/65 md:text-[1.0625rem]"
             >
-              Share specs, volumes, and timelines — we’ll respond with a clear path forward. Update placeholders
-              below with your official details.
+              Reach out for specifications, sampling, or production discussions — we’ll respond with a clear path
+              forward.
             </motion.p>
           </div>
         </div>
       </Reveal>
 
-      <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-14">
-        <Reveal variant="left">
-          <form
-            onSubmit={onSubmit}
-            className="space-y-5 rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-[0_16px_40px_-20px_rgba(0,0,0,0.1)] md:space-y-5 md:p-8"
-          >
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-neutral-800">
-                Name
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required
-                className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-[0.9375rem] outline-none transition focus:border-brand/50 focus:bg-white focus:ring-2 focus:ring-brand/15"
-                placeholder="Your name"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-neutral-800">
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-[0.9375rem] outline-none transition focus:border-brand/50 focus:bg-white focus:ring-2 focus:ring-brand/15"
-                placeholder="you@company.com"
-              />
-            </div>
-            <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-neutral-800">
-                Phone
-              </label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-[0.9375rem] outline-none transition focus:border-brand/50 focus:bg-white focus:ring-2 focus:ring-brand/15"
-                placeholder="+91 …"
-              />
-            </div>
-            <div>
-              <label htmlFor="requirement" className="block text-sm font-medium text-neutral-800">
-                Requirement
-              </label>
-              <textarea
-                id="requirement"
-                name="requirement"
-                rows={4}
-                required
-                className="mt-2 w-full resize-y rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-[0.9375rem] outline-none transition focus:border-brand/50 focus:bg-white focus:ring-2 focus:ring-brand/15"
-                placeholder="GSM, application, colors, volumes, timeline…"
-              />
-            </div>
-            <motion.button
-              type="submit"
-              whileHover={{ scale: 1.02, y: -1 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full rounded-full bg-brand py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark md:text-[0.9375rem]"
-            >
-              Submit inquiry
-            </motion.button>
-          </form>
-        </Reveal>
-
-        <div className="space-y-6">
-          <Reveal variant="right" delay={0.08}>
-            <div className="rounded-2xl border border-neutral-200/80 bg-white p-6 md:p-8">
+      <div className="grid items-stretch gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-14">
+        <div className="flex w-full">
+          <Reveal variant="right" delay={0.08} className="w-full">
+            <div className="h-full w-full rounded-2xl border border-neutral-200/80 bg-white p-6 md:p-8">
               <h3 className="font-display text-xl font-bold tracking-[-0.02em] text-neutral-900">
                 Company details
               </h3>
               <address className="mt-4 not-italic text-sm leading-relaxed text-neutral-600 md:text-base">
-                <p className="font-semibold text-neutral-900">Shubhankr Texfab India</p>
-                <p className="mt-3">[Street address line]</p>
-                <p>[City, State — PIN]</p>
+                <p className="font-semibold text-neutral-900">
+                  Shubhankr Texfab India
+                </p>
+                <p className="mt-3">Plot no. 4, Phase-IV, Sector-56, Kundli, Sonipat, Haryana 131028</p>
                 <p className="mt-5">
-                  <a href="tel:+910000000000" className="text-brand hover:text-brand-dark">
-                    +91 [phone placeholder]
+                  <a
+                    href="tel:+917011516270"
+                    className="text-brand hover:text-brand-dark"
+                  >
+                    +91 7011516270
+                  </a>
+                </p>
+                <p className="">
+                  <a
+                    href="tel:+917838894343"
+                    className="text-brand hover:text-brand-dark"
+                  >
+                    +91 7838894343
                   </a>
                 </p>
                 <p>
-                  <a href="mailto:info@example.com" className="text-brand hover:text-brand-dark">
-                    info@example.com
+                  <a
+                    href="mailto:stfindia@yahoo.co.in"
+                    className="text-brand hover:text-brand-dark"
+                  >
+                    stfindia@yahoo.co.in
                   </a>
                 </p>
               </address>
               <div className="mt-6 flex flex-wrap gap-2">
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.exportersindia.com/shubhankr-texfab-india/products.htm"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full border-2 border-neutral-200 px-4 py-2 text-xs font-semibold text-neutral-700 transition hover:border-brand hover:text-brand md:text-sm"
                 >
-                  LinkedIn
+                  ExportersIndia
                 </a>
                 <a
-                  href="https://www.indiamart.com/"
+                  href="https://www.indiamart.com/shubhankrtexfabindia/profile.html"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full border-2 border-neutral-200 px-4 py-2 text-xs font-semibold text-neutral-700 transition hover:border-brand hover:text-brand md:text-sm"
@@ -169,19 +112,19 @@ export function Contact() {
               </div>
             </div>
           </Reveal>
-
-          <Reveal variant="right" delay={0.12}>
-            <div className="overflow-hidden rounded-2xl border border-neutral-200/80 bg-neutral-200 shadow-lg">
+        </div>
+        <div className="flex w-full">
+          <Reveal variant="right" delay={0.12} className="w-full">
+            <div className="h-full w-full overflow-hidden rounded-2xl border border-neutral-200/80 bg-neutral-200 shadow-lg">
               <iframe
-                title="Company location map"
-                className="h-56 w-full grayscale-[10%] md:h-64 lg:h-72"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.412135454387!2d77.12900907553086!3d28.88609867252081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390dab8966bde753%3A0x7b0ef0c0232a203c!2sShubhankr%20TexFab%20India!5e0!3m2!1sen!2sin!4v1778429462417!5m2!1sen!2sin"
+                title="Shubhankr TexFab India location"
+                className="h-full w-full"
+                style={{ border: 0 }}
+                allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=77.0%2C28.4%2C77.4%2C28.8&amp;layer=mapnik"
               />
-              <p className="bg-white px-5 py-3 text-center text-sm text-neutral-500 md:text-base">
-                Replace with your Google Maps embed or exact coordinates.
-              </p>
             </div>
           </Reveal>
         </div>

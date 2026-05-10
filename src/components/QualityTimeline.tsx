@@ -1,5 +1,5 @@
-import { motion, useScroll, useSpring } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, useMotionValue, useScroll, useSpring, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 type Step = { title: string; desc: string };
 
@@ -20,11 +20,27 @@ function nodeCentersX(count: number) {
  */
 export function QualityTimeline({ steps }: QualityTimelineProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(containerRef, { amount: 0.25, margin: "-10% 0px" });
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 78%", "end 38%"],
+    // Wider range so desktop/laptop viewports still produce a smooth progress curve.
+    offset: ["start end", "end start"],
   });
-  const lineProgress = useSpring(scrollYProgress, { stiffness: 70, damping: 32, mass: 0.55 });
+  const scrollProgress = useSpring(scrollYProgress, { stiffness: 70, damping: 32, mass: 0.55 });
+
+  // Fallback: on tall/laptop viewports the section can fit fully on screen,
+  // making scroll-driven progress feel "stuck". Animate once on entering view.
+  const fallbackTarget = useMotionValue(0);
+  const fallbackProgress = useSpring(fallbackTarget, { stiffness: 120, damping: 26, mass: 0.7 });
+  useEffect(() => {
+    if (inView) fallbackTarget.set(1);
+  }, [inView, fallbackTarget]);
+
+  const lineProgress = useTransform([scrollProgress, fallbackProgress], (v) => {
+    const s = Number(v[0] ?? 0);
+    const f = Number(v[1] ?? 0);
+    return Math.max(Number.isFinite(s) ? s : 0, Number.isFinite(f) ? f : 0);
+  });
 
   const n = steps.length;
   const cx = nodeCentersX(n);

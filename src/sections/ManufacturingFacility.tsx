@@ -52,7 +52,7 @@ export function ManufacturingFacility() {
         />
       </Reveal>
       <Stagger
-        className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+        className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4"
         stagger={0.11}
         delayChildren={0.05}
         perspective
@@ -61,22 +61,22 @@ export function ManufacturingFacility() {
           <StaggerItem key={item.title} mode="tilt">
             <motion.article
               whileHover={{ y: -6, transition: { type: "spring", stiffness: 400, damping: 22 } }}
-              className="flex h-full flex-col rounded-[1.35rem] border border-neutral-200/80 bg-white p-7 shadow-[0_12px_40px_-28px_rgba(0,0,0,0.15)] md:p-8"
+              className="flex h-full flex-col rounded-[1.35rem] border border-neutral-200/80 bg-white p-6 shadow-[0_12px_40px_-28px_rgba(0,0,0,0.15)] md:p-7 lg:p-5"
               style={{ transformStyle: "preserve-3d" }}
             >
               <motion.div
                 whileHover={{ rotate: [0, -6, 6, 0] }}
                 transition={{ duration: 0.6 }}
-                className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/[0.1] text-brand md:h-14 md:w-14"
+                className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/[0.1] text-brand md:h-14 md:w-14 lg:h-12 lg:w-12"
               >
                 <svg className="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   {item.icon}
                 </svg>
               </motion.div>
-              <h3 className="mt-6 font-display text-lg font-bold tracking-[-0.02em] text-neutral-900 md:text-xl">
+              <h3 className="mt-6 font-display text-lg font-bold tracking-[-0.02em] text-neutral-900 md:text-xl lg:text-[1.05rem]">
                 {item.title}
               </h3>
-              <p className="mt-3 text-base leading-relaxed text-neutral-600">{item.desc}</p>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base lg:text-sm">{item.desc}</p>
             </motion.article>
           </StaggerItem>
         ))}

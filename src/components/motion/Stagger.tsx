@@ -22,7 +22,7 @@ export function Stagger({
   return (
     <motion.div
       className={`${className} ${perspective ? "[perspective:1200px]" : ""}`}
-      initial="hidden"
+      initial={false}
       whileInView="visible"
       viewport={{ once, margin: "-12% 0px" }}
       variants={{
