@@ -45,7 +45,7 @@ const products = [
     ),
   },
   {
-    title: "Automotive Seat Mesh",
+    title: "Automotive Seat Mesh & Helmets",
     desc: "Performance-oriented mesh for ventilation layers in seating and interior trim concepts.",
     gradient: "from-slate-100 via-brand/10 to-zinc-50",
     icon: (
@@ -58,7 +58,7 @@ const products = [
     ),
   },
   {
-    title: "Sports & Performance Mesh",
+    title: "Orthopedic Material, Baby Cribs & Cradles",
     desc: "High-breathability constructions for demanding movement, moisture management, and wear.",
     gradient: "from-emerald-50/90 via-brand/12 to-cyan-50/80",
     icon: (
@@ -105,10 +105,19 @@ export function ProductRange() {
                 <div className="relative flex h-full items-center justify-center">
                   <motion.div
                     animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 4 + i * 0.4, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{
+                      duration: 4 + i * 0.4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
                     className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white/90 text-brand shadow-lg backdrop-blur-sm md:h-24 md:w-24 lg:h-16 lg:w-16"
                   >
-                    <svg className="h-11 w-11 md:h-12 md:w-12 lg:h-9 lg:w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg
+                      className="h-11 w-11 md:h-12 md:w-12 lg:h-9 lg:w-9"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
                       {p.icon}
                     </svg>
                   </motion.div>
@@ -118,7 +127,9 @@ export function ProductRange() {
                 <h3 className="font-display text-xl font-bold tracking-[-0.02em] text-neutral-900 md:text-2xl lg:text-lg">
                   {p.title}
                 </h3>
-                <p className="mt-3 flex-1 text-base leading-relaxed text-neutral-600 lg:text-sm">{p.desc}</p>
+                <p className="mt-3 flex-1 text-base leading-relaxed text-neutral-600 lg:text-sm">
+                  {p.desc}
+                </p>
                 <motion.a
                   href="#contact"
                   whileHover={{ x: 6 }}

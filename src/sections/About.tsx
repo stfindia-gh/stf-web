@@ -8,16 +8,27 @@ export function About() {
       <Reveal variant="right">
         <SectionHeading title="About the company" />
       </Reveal>
-      <Reveal variant="fade" delay={0.12} className="max-w-3xl space-y-8 text-lg leading-relaxed text-neutral-600 md:text-xl md:leading-relaxed">
+      <Reveal
+        variant="fade"
+        delay={0.12}
+        className="max-w-3xl space-y-8 text-lg leading-relaxed text-neutral-600 md:text-xl md:leading-relaxed"
+      >
         <p>
-          <strong className="font-semibold text-neutral-900">Shubhankr Texfab India</strong> is a manufacturer
-          of high-quality air mesh fabrics focused on durability, breathability, and comfort. We combine modern
-          warp-knitting capability with disciplined process control to deliver fabrics that perform in
+          <strong className="font-semibold text-neutral-900">
+            Shubhankr Texfab India
+          </strong>{" "}
+          is amongst the first very few manufacturers of Air Mesh in India who
+          helped pioneer and establish the industry in the country. We
+          manufacture high-quality air mesh fabrics focused on durability,
+          breathability, and comfort. We combine modern warp-knitting capability
+          with disciplined process control to deliver fabrics that perform in
           real-world applications.
         </p>
+
         <p>
-          Our priorities are straightforward: consistent quality, competitive pricing, and a reliable supply you
-          can plan around. We invest in innovation and continuous improvement so your products stay ahead —
+          Our priorities are straightforward: consistent quality, competitive
+          pricing, and a reliable supply you can plan around. We invest in
+          innovation and continuous improvement so your products stay ahead —
           without compromising strength, hand-feel, or ventilation.
         </p>
       </Reveal>

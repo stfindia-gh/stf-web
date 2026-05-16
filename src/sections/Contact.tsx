@@ -48,8 +48,8 @@ export function Contact() {
               transition={{ delay: 0.22 }}
               className="mt-4 text-base leading-relaxed text-white/65 md:text-[1.0625rem]"
             >
-              Reach out for specifications, sampling, or production discussions — we’ll respond with a clear path
-              forward.
+              Reach out for specifications, sampling, or production discussions
+              — we’ll respond with a clear path forward.
             </motion.p>
           </div>
         </div>
@@ -66,21 +66,23 @@ export function Contact() {
                 <p className="font-semibold text-neutral-900">
                   Shubhankr Texfab India
                 </p>
-                <p className="mt-3">Plot no. 4, Phase-IV, Sector-56, Kundli, Sonipat, Haryana 131028</p>
-                <p className="mt-5">
-                  <a
-                    href="tel:+917011516270"
-                    className="text-brand hover:text-brand-dark"
-                  >
-                    +91 7011516270
-                  </a>
+                <p className="mt-3">
+                  Plot 517, Phase II, Barhi Industrial Area, Haryana-131101
                 </p>
-                <p className="">
+                <p className="mt-5">
                   <a
                     href="tel:+917838894343"
                     className="text-brand hover:text-brand-dark"
                   >
                     +91 7838894343
+                  </a>
+                </p>
+                <p className="">
+                  <a
+                    href="tel:+917503933222"
+                    className="text-brand hover:text-brand-dark"
+                  >
+                    +91 7503933222
                   </a>
                 </p>
                 <p>
@@ -117,14 +119,14 @@ export function Contact() {
           <Reveal variant="right" delay={0.12} className="w-full">
             <div className="h-full w-full overflow-hidden rounded-2xl border border-neutral-200/80 bg-neutral-200 shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.412135454387!2d77.12900907553086!3d28.88609867252081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390dab8966bde753%3A0x7b0ef0c0232a203c!2sShubhankr%20TexFab%20India!5e0!3m2!1sen!2sin!4v1778429462417!5m2!1sen!2sin"
-                title="Shubhankr TexFab India location"
-                className="h-full w-full"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3485.959714603517!2d77.03823467551831!3d29.106870675409056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDA2JzI0LjciTiA3N8KwMDInMjYuOSJF!5e0!3m2!1sen!2sin!4v1778917647578!5m2!1sen!2sin"
+                width="600"
+                height="450"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              />
+              ></iframe>
             </div>
           </Reveal>
         </div>

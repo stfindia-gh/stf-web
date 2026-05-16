@@ -43,7 +43,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ...springSoft, delay: 0.08 }}
-              className="text-xs font-semibold uppercase tracking-[0.3em] text-brand md:text-sm"
+              className="text-3xl font-semibold uppercase tracking-[0.3em] text-brand md:text-3xl"
             >
               Shubhankr Texfab India
             </motion.p>
